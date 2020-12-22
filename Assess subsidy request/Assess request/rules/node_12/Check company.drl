@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check company</name>
+  <uuid>652869d2-8620-47c8-a487-6b380316a211</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    the kvkNumber of Company is not null
+    and the kvkNumber of Company is not empty
+    and the name of Company is not null
+    and the name of Company is not empty
+then
+    set decision to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

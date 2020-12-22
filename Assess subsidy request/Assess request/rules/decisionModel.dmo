@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>87ac9079-5921-4343-800f-06023b58a1b1</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Company">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Company" collection="false" name="Company"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Company" typeRef="Company"/>
+    </inputData>
+    <decision id="node_1" name="Request valid">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Company exists"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Install date exists"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Purchase date exists"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Device exists"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Request valid"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_1/Check%20request.drl" kind="BusinessRule" name="Check request"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Request valid" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_11"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Install date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Install date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Install date" typeRef="ilog.rules.brl.SimpleDate"/>
+    </inputData>
+    <inputData id="node_3" name="Purchase date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Purchase date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Purchase date" typeRef="ilog.rules.brl.SimpleDate"/>
+    </inputData>
+    <inputData id="node_4" name="Device">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Device" collection="false" name="Device"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Device" typeRef="Device"/>
+    </inputData>
+    <decision id="node_9" name="Device exists">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Device" collection="false" name="Device"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Device exists"/>
+                <rule defaultRule="true" href="node_9/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_9/Check%20device.drl" kind="BusinessRule" name="Check device"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Device exists" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Purchase date exists">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Purchase date"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Purchase date exists"/>
+                <rule defaultRule="true" href="node_10/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_10/Check%20purchase%20date.drl" kind="BusinessRule" name="Check purchase date"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Purchase date exists" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_11" name="Install date exists">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Install date"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Install date exists"/>
+                <rule defaultRule="true" href="node_11/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_11/Check%20install%20date.drl" kind="BusinessRule" name="Check install date"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_11_ii" name="Install date exists" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_12" name="Company exists">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Company" collection="false" name="Company"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Company exists"/>
+                <rule defaultRule="true" href="node_12/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_12/Check%20company.drl" kind="BusinessRule" name="Check company"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Company exists" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

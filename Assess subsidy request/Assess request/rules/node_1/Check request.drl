@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check request</name>
+  <uuid>04e2f5d9-3d55-4fb3-b86f-0cf455131f42</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    all of the following conditions are true :
+        - 'Company exists'
+        - 'Device exists'
+        - 'Install date exists'
+        - 'Purchase date exists'
+then
+    set decision to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

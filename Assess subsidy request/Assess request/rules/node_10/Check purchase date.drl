@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check purchase date</name>
+  <uuid>036649d3-aaa3-456f-a77c-4fb648e539e9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Purchase date' is not null
+then
+    set decision to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

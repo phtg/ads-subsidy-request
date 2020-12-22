@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check device</name>
+  <uuid>836b354a-2676-481f-a091-fbfd006a7206</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    the code of Device is not null
+    and the code of Device is not empty
+    and the power of Device is more than 0
+    and the type of Device is not null
+    and the type of Device is one of { the type of Device }
+then
+    set decision to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

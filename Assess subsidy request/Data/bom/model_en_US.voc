@@ -1,0 +1,47 @@
+
+# Certification
+Certification#concept.label = Certification
+Certification.Certification(java.lang.String,ilog.rules.brl.SimpleDate,java.lang.String,ilog.rules.brl.SimpleDate)#phrase.navigation = a new {Certification} where {0, code} {1, endDate} {2, name} {3, startDate}
+Certification.code#phrase.action = set the code of {this} to {code}
+Certification.code#phrase.navigation = {code} of {this}
+Certification.endDate#phrase.action = set the endDate of {this} to {endDate}
+Certification.endDate#phrase.navigation = {endDate} of {this}
+Certification.name#phrase.action = set the name of {this} to {name}
+Certification.name#phrase.navigation = {name} of {this}
+Certification.startDate#phrase.action = set the startDate of {this} to {startDate}
+Certification.startDate#phrase.navigation = {startDate} of {this}
+
+# Company
+Company#concept.label = Company
+Company.Company(java.util.List,java.lang.String,java.lang.String)#phrase.navigation = a new {Company} where {0, certifications} {1, kvkNumber} {2, name}
+Company.addTo_certificationses(Certification)#phrase.action = add {0} to the certificationses of {this}
+Company.certificationses#phrase.action = set the certificationses of {this} to {certifications}
+Company.certificationses#phrase.navigation = {certifications} of {this}
+Company.clear_certificationses()#phrase.action = clear the certificationses of {this}
+Company.kvkNumber#phrase.action = set the kvkNumber of {this} to {kvkNumber}
+Company.kvkNumber#phrase.navigation = {kvkNumber} of {this}
+Company.name#phrase.action = set the name of {this} to {name}
+Company.name#phrase.navigation = {name} of {this}
+Company.removeFrom_certificationses(Certification)#phrase.action = remove {0} from the certificationses of {this}
+
+# Device
+Device#concept.label = Device
+Device.Device(java.lang.String,java.lang.String,java.lang.String,java.lang.Long,DeviceType1)#phrase.navigation = a new {Device} where {0, brand} {1, code} {2, model} {3, power} {4, type}
+Device.brand#phrase.action = set the brand of {this} to {brand}
+Device.brand#phrase.navigation = {brand} of {this}
+Device.code#phrase.action = set the code of {this} to {code}
+Device.code#phrase.navigation = {code} of {this}
+Device.model#phrase.action = set the model of {this} to {model}
+Device.model#phrase.navigation = {model} of {this}
+Device.power#phrase.action = set the power of {this} to {power}
+Device.power#phrase.navigation = {power} of {this}
+Device.type#phrase.action = set the type of {this} to {type}
+Device.type#phrase.clearer = clear the type of {this}
+Device.type#phrase.navigation = {type} of {this}
+
+# DeviceType1
+DeviceType1#concept.label = DeviceType
+DeviceType1.aIR_AIR#instance.label = AIR_AIR
+DeviceType1.aIR_WATER#instance.label = AIR_WATER
+DeviceType1.gROUND_WATER#instance.label = GROUND_WATER
+DeviceType1.wATER_WATER#instance.label = WATER_WATER
