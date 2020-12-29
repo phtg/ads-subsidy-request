@@ -3,6 +3,8 @@
   <name>Definitions</name>
   <uuid>c4bb705a-bf72-43f2-bbc9-c686043e36f6</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to a new Assessment where
-        the decision is MANUAL;]]></definition>
+  <definition><![CDATA[
+    set decision to a new Assessment where
+        the decision is MANUAL ,
+        the amount is 0 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
