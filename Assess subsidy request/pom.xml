@@ -8,7 +8,10 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>Assess company</module>
+        <module>Assess device</module>
         <module>Assess request</module>
+        <module>Assess subsidy</module>
         <module>Data</module>
         <module>.decisionservice</module>
     </modules>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>9f481e8d-a2d5-41e3-bc7e-704d9e01d340</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="node_1" name="Subsidy assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Assessment" collection="false" name="Device assessment"/>
+                <input bomType="Assessment" collection="false" name="Date assessment"/>
+                <input bomType="Assessment" collection="false" name="Request assessment"/>
+                <input bomType="Assessment" collection="false" name="Company assessment"/>
+                <output bomType="Assessment" collection="false" name="Subsidy assessment"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Subsidy assessment" typeRef="Assessment"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_13"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_12"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Device assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Device" collection="false" name="Device"/>
+                <output bomType="Assessment" collection="false" name="Device assessment"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Device assessment" typeRef="Assessment"/>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_3"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_6" name="Request assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Company" collection="false" name="Company"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+                <input bomType="Device" collection="false" name="Device"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
+                <output bomType="Assessment" collection="false" name="Request assessment"/>
+                <rule defaultRule="false" href="node_6/Definitions.drl" kind="BusinessRule" name="Definitions"/>
+                <rule defaultRule="false" href="node_6/Assess%20request.drl" kind="BusinessRule" name="Assess request"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Request assessment" typeRef="Assessment"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_7" name="Company">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Company" collection="false" name="Company"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Company" typeRef="Company"/>
+    </inputData>
+    <inputData id="node_8" name="Install date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_8_ii" name="Install date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <inputData id="node_9" name="Purchase date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_9_ii" name="Purchase date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <inputData id="node_10" name="Device">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Device" collection="false" name="Device"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_10_ii" name="Device" typeRef="Device"/>
+    </inputData>
+    <decision id="node_12" name="Company assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Company" collection="false" name="Company"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+                <output bomType="Assessment" collection="false" name="Company assessment"/>
+                <rule defaultRule="true" href="node_12/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_12/Definitions.drl" kind="BusinessRule" name="Definitions"/>
+                <rule defaultRule="false" href="node_12/Assess%20company.drl" kind="BusinessRule" name="Assess company"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_12_ii" name="Company assessment" typeRef="Assessment"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_11"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_13" name="Date assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Request date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
+                <output bomType="Assessment" collection="false" name="Date assessment"/>
+                <rule defaultRule="false" href="node_13/Definitions.drl" kind="BusinessRule" name="Definitions"/>
+                <rule defaultRule="false" href="node_13/Assess%20dates.drl" kind="BusinessRule" name="Assess dates"/>
+                <rule defaultRule="true" href="node_13/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_13_ii" name="Date assessment" typeRef="Assessment"/>
+        <informationRequirement>
+            <requiredInput href="#node_14"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_14" name="Request date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Request date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_14_ii" name="Request date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <businessKnowledgeModel id="node_2" name="Assess request">
+        <variable name="Assess request" typeRef="java.lang.Boolean"/>
+        <encapsulatedLogic typeRef="java.lang.Boolean">
+            <formalParameter name="company" typeRef="Company"/>
+            <formalParameter name="installDate" typeRef="ilog.rules.brl.Date"/>
+            <formalParameter name="purchaseDate" typeRef="ilog.rules.brl.Date"/>
+            <formalParameter name="device" typeRef="Device"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.subsidy_request.assess_subsidy_request.assessrequest.AssessRequest"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Company,ilog.rules.brl.Date,ilog.rules.brl.Date,Device)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_3" name="Assess device">
+        <variable name="Assess device" typeRef="java.lang.String"/>
+        <encapsulatedLogic typeRef="java.lang.String">
+            <formalParameter name="device" typeRef="Device"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.subsidy_request.assess_subsidy_request.assessdevice.AssessDevice"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Device)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_11" name="Assess company">
+        <variable name="Assess company" typeRef="java.lang.Boolean"/>
+        <encapsulatedLogic typeRef="java.lang.Boolean">
+            <formalParameter name="company" typeRef="Company"/>
+            <formalParameter name="installDate" typeRef="ilog.rules.brl.Date"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.subsidy_request.assess_subsidy_request.assesscompany.AssessCompany"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Company,ilog.rules.brl.Date)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

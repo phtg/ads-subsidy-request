@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Assess request</name>
+  <uuid>bf51a471-17ee-46cb-bad5-3cb1dba0fc91</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+definitions
+    set 'request valid' to the assess request computed from
+        Company being Company ,
+        Install date being 'Install date' ,
+        Purchase date being 'Purchase date' ,
+        Device being Device ;
+
+    if
+    'request valid'
+then
+    set the decision of decision to ACCEPTED ;
+else
+    set the decision of decision to REJECTED ;
+    add "The request is invalid" to the messageses of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

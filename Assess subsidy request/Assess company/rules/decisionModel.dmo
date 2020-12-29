@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>f0821b3e-16f0-4688-8dd3-f77d2a95b194</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Company">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Company" collection="false" name="Company"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Company" typeRef="Company"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Company" collection="false" name="Company"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Check%20KVK.drl" kind="BusinessRule" name="Check KVK"/>
+                <rule defaultRule="false" href="node_1/Check%20certification.drl" kind="BusinessRule" name="Check certification"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Install date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Install date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,14 +1,36 @@
 
+# Assessment
+Assessment#concept.label = Assessment
+Assessment.Assessment(double,AssessmentType,java.util.List)#phrase.navigation = a new {Assessment} where {0, amount} {1, decision} {2, messages}
+Assessment.addTo_messages(java.lang.String)#phrase.action = add {0} to the messageses of {this}
+Assessment.amount#phrase.action = set the amount of {this} to {amount}
+Assessment.amount#phrase.navigation = {amount} of {this}
+Assessment.clear_messages()#phrase.action = clear the messageses of {this}
+Assessment.decision#phrase.action = set the decision of {this} to {decision}
+Assessment.decision#phrase.clearer = clear the decision of {this}
+Assessment.decision#phrase.navigation = {decision} of {this}
+Assessment.messages#phrase.action = set the messageses of {this} to {messages}
+Assessment.messages#phrase.navigation = {messages} of {this}
+Assessment.removeFrom_messages(java.lang.String)#phrase.action = remove {0} from the messageses of {this}
+
+# AssessmentType
+AssessmentType#concept.label = AssessmentType
+AssessmentType.aCCEPTED#instance.label = ACCEPTED
+AssessmentType.mANUAL#instance.label = MANUAL
+AssessmentType.rEJECTED#instance.label = REJECTED
+
 # Certification
 Certification#concept.label = Certification
-Certification.Certification(java.lang.String,ilog.rules.brl.SimpleDate,java.lang.String,ilog.rules.brl.SimpleDate)#phrase.navigation = a new {Certification} where {0, code} {1, endDate} {2, name} {3, startDate}
+Certification.Certification(java.lang.String,ilog.rules.brl.Date,java.lang.String,ilog.rules.brl.Date)#phrase.navigation = a new {Certification} where {0, code} {1, endDate} {2, name} {3, startDate}
 Certification.code#phrase.action = set the code of {this} to {code}
 Certification.code#phrase.navigation = {code} of {this}
 Certification.endDate#phrase.action = set the endDate of {this} to {endDate}
+Certification.endDate#phrase.clearer = clear the endDate of {this}
 Certification.endDate#phrase.navigation = {endDate} of {this}
 Certification.name#phrase.action = set the name of {this} to {name}
 Certification.name#phrase.navigation = {name} of {this}
 Certification.startDate#phrase.action = set the startDate of {this} to {startDate}
+Certification.startDate#phrase.clearer = clear the startDate of {this}
 Certification.startDate#phrase.navigation = {startDate} of {this}
 
 # Company

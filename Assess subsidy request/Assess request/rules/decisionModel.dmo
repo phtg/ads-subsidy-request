@@ -44,18 +44,18 @@
     <inputData id="node_2" name="Install date">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Install date"/>
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
             </initialization>
         </extensionElements>
-        <variable id="node_2_ii" name="Install date" typeRef="ilog.rules.brl.SimpleDate"/>
+        <variable id="node_2_ii" name="Install date" typeRef="ilog.rules.brl.Date"/>
     </inputData>
     <inputData id="node_3" name="Purchase date">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Purchase date"/>
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
             </initialization>
         </extensionElements>
-        <variable id="node_3_ii" name="Purchase date" typeRef="ilog.rules.brl.SimpleDate"/>
+        <variable id="node_3_ii" name="Purchase date" typeRef="ilog.rules.brl.Date"/>
     </inputData>
     <inputData id="node_4" name="Device">
         <extensionElements>
@@ -82,7 +82,7 @@
     <decision id="node_10" name="Purchase date exists">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Purchase date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
                 <output bomType="java.lang.Boolean" collection="false" name="Purchase date exists"/>
                 <rule defaultRule="true" href="node_10/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_10/Check%20purchase%20date.drl" kind="BusinessRule" name="Check purchase date"/>
@@ -96,7 +96,7 @@
     <decision id="node_11" name="Install date exists">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Install date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
                 <output bomType="java.lang.Boolean" collection="false" name="Install date exists"/>
                 <rule defaultRule="true" href="node_11/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_11/Check%20install%20date.drl" kind="BusinessRule" name="Check install date"/>

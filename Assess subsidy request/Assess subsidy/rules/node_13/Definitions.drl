@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Check install date</name>
-  <uuid>d3dedb59-e428-4048-971f-233cf727400a</uuid>
+  <name>Definitions</name>
+  <uuid>f01aa8e9-f483-4835-84c4-6a73fbfc3072</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[
-if
-    'Install date' is null
-    or 'Install date' is undefined
-then
-    set decision to false ;
-
-else
-    set decision to true ;]]></definition>
+  <definition><![CDATA[set decision to a new Assessment where
+        the decision is MANUAL ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

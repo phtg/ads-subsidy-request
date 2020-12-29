@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Check install date</name>
-  <uuid>d3dedb59-e428-4048-971f-233cf727400a</uuid>
+  <name>Check KVK</name>
+  <uuid>6b8823cc-3b55-4e6f-bd90-b7d03f2ba1b5</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[
-if
-    'Install date' is null
-    or 'Install date' is undefined
+  <definition><![CDATA[if
+    the kvkNumber of Company is empty
 then
     set decision to false ;
 
-else
-    set decision to true ;]]></definition>
+else set decision to true ; ]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

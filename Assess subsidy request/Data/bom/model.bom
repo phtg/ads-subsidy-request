@@ -1,5 +1,62 @@
 
 
+public class Assessment
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Assessment"
+        property "de.generated" "true"
+{
+    public double amount
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "amount"
+                property update "true";
+    public AssessmentType decision
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "decision"
+                property update "true";
+    public java.util.List messages domain 0,* class string
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "messages"
+                property update "true";
+    public Assessment(double amount, 
+        AssessmentType decision, 
+        java.util.List messages domain 0,* class string)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Assessment()
+                property "dataio.default" "true";
+    public void addTo_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void clear_messages()
+                property collectionAttribute "messages"
+                property update "true";
+    public void removeFrom_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void set_messages(java.util.Collection messages domain 0,* class string)
+                property collectionAttribute "messages"
+                property update "true";
+}
+
+public class AssessmentType
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "AssessmentType"
+        property "de.generated" "true"
+{
+    domain {static aCCEPTED, static mANUAL, static rEJECTED}
+    public static final readonly AssessmentType aCCEPTED
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ACCEPTED";
+    public static final readonly AssessmentType mANUAL
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "MANUAL";
+    public static final readonly AssessmentType rEJECTED
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "REJECTED";
+}
+
 public class Certification
         property "ads.typeId" "4"
         property "com.fasterxml.jackson.annotation.JsonTypeName" "Certification"
@@ -9,7 +66,7 @@ public class Certification
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "code"
                 property update "true";
-    public ilog.rules.brl.SimpleDate endDate
+    public ilog.rules.brl.Date endDate
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "endDate"
                 property update "true";
@@ -17,11 +74,11 @@ public class Certification
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "name"
                 property update "true";
-    public ilog.rules.brl.SimpleDate startDate
+    public ilog.rules.brl.Date startDate
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "startDate"
                 property update "true";
-    public Certification(string code, ilog.rules.brl.SimpleDate endDate, string name, ilog.rules.brl.SimpleDate startDate)
+    public Certification(string code, ilog.rules.brl.Date endDate, string name, ilog.rules.brl.Date startDate)
                 property autoExpand "true"
                 property groups "BALA"
                 property prototype "true";

@@ -13,7 +13,22 @@
     <dependencies>
         <dependency>
             <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+            <artifactId>assessCompany</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+            <artifactId>assessDevice</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
             <artifactId>assessRequest</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+            <artifactId>assessSubsidy</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -50,7 +65,34 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+                                    <artifactId>assessCompany</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+                                    <artifactId>assessDevice</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
                                     <artifactId>assessRequest</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>decisions.subsidy_request.assess_subsidy_request</groupId>
+                                    <artifactId>assessSubsidy</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
