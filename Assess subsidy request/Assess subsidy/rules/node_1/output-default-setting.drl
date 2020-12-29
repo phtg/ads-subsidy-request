@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Definitions</name>
-  <uuid>58d9bda9-1125-4d45-9eac-7ab3df1288d1</uuid>
+  <name>output-default-setting</name>
+  <uuid>9d877e53-53a9-4717-91e6-d2c74506338e</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[set decision to a new Assessment where
-        the decision is MANUAL , 
-    the amount is 0 ;
-]]></definition>
+        the amount is 0, 
+        the decision is MANUAL, 
+        the messageses are { "Could not assess subsidy" } ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

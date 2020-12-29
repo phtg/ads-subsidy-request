@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>All accepted</name>
+  <uuid>d1bc9790-f25c-4ccc-880f-f19641e6a693</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true : 
+    - the decision of 'Company assessment' is ACCEPTED 
+    - the decision of 'Date assessment' is ACCEPTED 
+    - the decision of 'Device assessment' is ACCEPTED 
+    - the decision of 'Request assessment' is ACCEPTED  
+then
+    set the decision of decision to ACCEPTED ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

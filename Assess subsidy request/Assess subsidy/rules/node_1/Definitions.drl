@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Definitions</name>
+  <uuid>808e597d-b445-454d-a17a-6f7ec1b8da6f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+    set decision to a new Assessment where
+        the amount is 0 ,
+        the decision is MANUAL ;
+    for each string called 'message' , in the messageses of 'Company assessment' :
+        - add message to the messageses of decision ;
+    for each string called 'message' , in the messageses of 'Date assessment' :
+        - add message to the messageses of decision ;
+    for each string called 'message' , in the messageses of 'Device assessment' :
+        - add message to the messageses of decision ;
+    for each string called 'message' , in the messageses of 'Request assessment' :
+        - add message to the messageses of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

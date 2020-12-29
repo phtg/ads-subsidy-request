@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Any rejected</name>
+  <uuid>716b4a17-442c-4ac1-9797-719d48180746</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    any of the following conditions is true : 
+    - the decision of 'Company assessment' is REJECTED 
+    - the decision of 'Date assessment' is REJECTED 
+    - the decision of 'Device assessment' is REJECTED 
+    - the decision of 'Request assessment' is REJECTED 
+then
+    set the decision of decision to REJECTED ;  ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
