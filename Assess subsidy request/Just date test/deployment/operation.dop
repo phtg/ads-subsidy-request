@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Just date test">
+  <name>justDateTest</name>
+  <uuid>b1e0d627-0851-4614-8a1a-83ac7519865d</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#72364902-4d36-4a77-8d94-cd3590f0f29b"/>
+  <targetRuleProject href="../../Just%20date%20test#8607ad77-d839-4674-bc0e-dd5787b4199e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

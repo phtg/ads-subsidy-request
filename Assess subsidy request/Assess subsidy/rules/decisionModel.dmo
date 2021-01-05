@@ -9,16 +9,16 @@
     </extensionElements>
     <decision id="node_1" name="Subsidy assessment">
         <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="Assessment" collection="false" name="Device assessment"/>
                 <input bomType="Assessment" collection="false" name="Date assessment"/>
                 <input bomType="Assessment" collection="false" name="Request assessment"/>
                 <input bomType="Assessment" collection="false" name="Company assessment"/>
                 <output bomType="Assessment" collection="false" name="Subsidy assessment"/>
                 <rule defaultRule="false" href="node_1/Definitions.drl" kind="BusinessRule" name="Definitions"/>
+                <rule defaultRule="false" href="node_1/All%20accepted.drl" kind="BusinessRule" name="All accepted"/>
                 <rule defaultRule="false" href="node_1/Any%20rejected.drl" kind="BusinessRule" name="Any rejected"/>
                 <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
-                <rule defaultRule="false" href="node_1/All%20accepted.drl" kind="BusinessRule" name="All accepted"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Subsidy assessment" typeRef="Assessment"/>

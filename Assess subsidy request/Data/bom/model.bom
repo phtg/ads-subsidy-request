@@ -125,6 +125,48 @@ public class Company
                 property update "true";
 }
 
+public class CompositeTest
+        property "ads.typeId" "8"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CompositeTest"
+        property "de.generated" "true"
+{
+    public java.lang.Long anotherInput
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "anotherInput"
+                property update "true";
+    public java.lang.Long integerInput
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "integerInput"
+                property update "true";
+    public java.lang.Long thirdAttribute
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "thirdAttribute"
+                property update "true";
+    public CompositeTest(java.lang.Long anotherInput, java.lang.Long integerInput, java.lang.Long thirdAttribute)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public CompositeTest()
+                property "dataio.default" "true";
+}
+
+public class DateTest
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "DateTest"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.Date dateFirst
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DateFirst"
+                property update "true";
+    public DateTest(ilog.rules.brl.Date dateFirst)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public DateTest()
+                property "dataio.default" "true";
+}
+
 public class Device
         property "ads.typeId" "1"
         property "com.fasterxml.jackson.annotation.JsonTypeName" "Device"

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>85395916-c8cf-408f-b6d3-b7a644bc0dcf</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Input">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Input"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Input" typeRef="java.lang.Long"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Long" collection="false" name="Input"/>
+                <input bomType="java.lang.Long" collection="false" name="Input 3"/>
+                <input bomType="CompositeTest" collection="false" name="Input 4"/>
+                <output bomType="java.lang.Long" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/UseFunction.drl" kind="BusinessRule" name="UseFunction"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="java.lang.Long"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_3" name="Input 3">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Input 3"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Input 3" typeRef="java.lang.Long"/>
+    </inputData>
+    <inputData id="node_4" name="Input 4">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="CompositeTest" collection="false" name="Input 4"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Input 4" typeRef="CompositeTest"/>
+    </inputData>
+    <businessKnowledgeModel id="node_5" name="NestedModel">
+        <variable name="NestedModel" typeRef="java.lang.Long"/>
+        <encapsulatedLogic typeRef="java.lang.Long">
+            <formalParameter name="input" typeRef="java.lang.Long"/>
+            <formalParameter name="input2" typeRef="java.lang.Long"/>
+            <formalParameter name="input3" typeRef="CompositeTest"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.subsidy_request.assess_subsidy_request.nestedmodel.NestedModel"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.lang.Long,java.lang.Long,CompositeTest)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

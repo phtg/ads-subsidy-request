@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Request valid</name>
+  <uuid>7b540d2f-e304-42ee-9597-aa76b6e98540</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    'Request valid'
+then
+    set decision to "REQUEST VALID" ;
+else
+    set decision to "REQUEST INVALID" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

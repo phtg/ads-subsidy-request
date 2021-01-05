@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>72364902-4d36-4a77-8d94-cd3590f0f29b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Input">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Input"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Input" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Input"/>
+                <input bomType="DateTest" collection="false" name="DateTest"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Request valid"/>
+                <output bomType="java.lang.String" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Check%20just%20date.drl" kind="BusinessRule" name="Check just date"/>
+                <rule defaultRule="false" href="node_1/DateFirst.drl" kind="BusinessRule" name="DateFirst"/>
+                <rule defaultRule="false" href="node_1/Request%20valid.drl" kind="BusinessRule" name="Request valid"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="DateTest">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="DateTest" collection="false" name="DateTest"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="DateTest" typeRef="DateTest"/>
+    </inputData>
+    <inputData id="node_4" name="Company">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Company" collection="false" name="Company"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Company" typeRef="Company"/>
+    </inputData>
+    <inputData id="node_5" name="Purchase date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_5_ii" name="Purchase date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <inputData id="node_6" name="Install date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_6_ii" name="Install date" typeRef="ilog.rules.brl.Date"/>
+    </inputData>
+    <inputData id="node_7" name="Device">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Device" collection="false" name="Device"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Device" typeRef="Device"/>
+    </inputData>
+    <decision id="node_8" name="Request valid">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Company" collection="false" name="Company"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Purchase date"/>
+                <input bomType="ilog.rules.brl.Date" collection="false" name="Install date"/>
+                <input bomType="Device" collection="false" name="Device"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Request valid"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Request valid" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_9"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_9" name="Date test">
+        <variable name="Date test" typeRef="java.lang.String"/>
+        <encapsulatedLogic typeRef="java.lang.String">
+            <formalParameter name="input" typeRef="ilog.rules.brl.Date"/>
+            <formalParameter name="dateTest" typeRef="DateTest"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.subsidy_request.assess_subsidy_request.datetest.DateTest"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ilog.rules.brl.Date,DateTest)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

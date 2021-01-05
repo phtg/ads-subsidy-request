@@ -20,10 +20,11 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="Device" collection="false" name="Device"/>
                 <output bomType="Assessment" collection="false" name="Decision"/>
-                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_1/Definitions.drl" kind="BusinessRule" name="Definitions"/>
                 <rule defaultRule="false" href="node_1/Assess%20max%20power.drl" kind="BusinessRule" name="Assess max power"/>
+                <rule defaultRule="false" href="node_1/Assess%20type.drl" kind="BusinessRule" name="Assess type"/>
                 <rule defaultRule="false" href="node_1/Check%20known%20devices.dmt" kind="DecisionTable" name="Check known devices"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Decision" typeRef="Assessment"/>

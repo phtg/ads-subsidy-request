@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check cert</name>
+  <uuid>5be9189e-1fb5-4975-92c2-2a758b89fdfb</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    there is one Certification in the certificationses of Company
+        where the code of this Certification is "HEATPUMP_INSTALLER"
+        and the startDate of this Certification is before 'Install date'
+        and the endDate of this Certification is after 'Install date' ,
+then
+    set decision to true ;
+else
+    set decision to false ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

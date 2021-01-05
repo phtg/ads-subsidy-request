@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add complex</name>
+  <uuid>36509297-27eb-4b15-86e5-70808bbdb15f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    Input is more than 0
+    and the integerInput of 'Input 3' is more than 0
+then
+    set decision to Input + the integerInput of 'Input 3' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

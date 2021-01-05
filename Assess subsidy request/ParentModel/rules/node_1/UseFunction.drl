@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>UseFunction</name>
+  <uuid>ad5e6f6c-129d-46c4-a0d3-1e9e069b28e4</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+  set 'outcome' to the nested model computed from 
+    Input being Input ,
+    Input 2 being 0 ,
+
+    Input 3 being 'Input 4' ;
+
+if
+      outcome is more than 1
+then
+    set decision to outcome ;
+
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

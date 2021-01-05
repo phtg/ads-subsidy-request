@@ -1,0 +1,20 @@
+{
+  "input": "2021-07-14T13:13:13Z",
+  "dateTest": {
+    "DateFirst": "2021-07-14T13:13:13Z"
+  },
+  "company": {
+    "name": "adasdadad",
+    "kvkNumber": "6546546456456",
+    "certificationses": []
+  },
+  "purchaseDate": "2020-12-31T13:22:02.210Z",
+  "installDate": "2020-12-31T13:22:01.726Z",
+  "device": {
+    "brand": "Enerso",
+    "code": "KA03859",
+    "model": "AWK-O 05",
+    "power": 5,
+    "type": "GROUND_WATER"
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Assess type</name>
+  <uuid>1ec5b483-2a0c-4ba4-bd19-b22af1701621</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the type of Device is AIR_AIR
+then
+    set the decision of decision to REJECTED ;
+    add "Air to air type devices are not eligible" to the messageses of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

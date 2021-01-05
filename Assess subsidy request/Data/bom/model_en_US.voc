@@ -46,6 +46,23 @@ Company.name#phrase.action = set the name of {this} to {name}
 Company.name#phrase.navigation = {name} of {this}
 Company.removeFrom_certificationses(Certification)#phrase.action = remove {0} from the certificationses of {this}
 
+# CompositeTest
+CompositeTest#concept.label = CompositeTest
+CompositeTest.CompositeTest(java.lang.Long,java.lang.Long,java.lang.Long)#phrase.navigation = a new {CompositeTest} where {0, anotherInput} {1, integerInput} {2, thirdAttribute}
+CompositeTest.anotherInput#phrase.action = set the anotherInput of {this} to {anotherInput}
+CompositeTest.anotherInput#phrase.navigation = {anotherInput} of {this}
+CompositeTest.integerInput#phrase.action = set the integerInput of {this} to {integerInput}
+CompositeTest.integerInput#phrase.navigation = {integerInput} of {this}
+CompositeTest.thirdAttribute#phrase.action = set the thirdAttribute of {this} to {thirdAttribute}
+CompositeTest.thirdAttribute#phrase.navigation = {thirdAttribute} of {this}
+
+# DateTest
+DateTest#concept.label = DateTest
+DateTest.DateTest(ilog.rules.brl.Date)#phrase.navigation = a new {DateTest} where {0, DateFirst}
+DateTest.dateFirst#phrase.action = set the DateFirst of {this} to {DateFirst}
+DateTest.dateFirst#phrase.clearer = clear the DateFirst of {this}
+DateTest.dateFirst#phrase.navigation = {DateFirst} of {this}
+
 # Device
 Device#concept.label = Device
 Device.Device(java.lang.String,java.lang.String,java.lang.String,java.lang.Long,DeviceType1)#phrase.navigation = a new {Device} where {0, brand} {1, code} {2, model} {3, power} {4, type}

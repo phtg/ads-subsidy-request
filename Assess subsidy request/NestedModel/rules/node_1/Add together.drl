@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add together</name>
+  <uuid>3074647a-c47f-4d21-9958-fd685493d4ad</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    Input is more than 0
+    and 'Input 2' is more than 0
+then
+    set decision to Input + 'Input 2' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

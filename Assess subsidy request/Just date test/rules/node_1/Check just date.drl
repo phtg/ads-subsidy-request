@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check just date</name>
+  <uuid>7abc8a19-d347-48a5-9386-2a0025c4dbc6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if
+    Input is before 1/1/2021 1:32:00 PM 
+then
+    set decision to "KLOPT" ;
+else
+    set decision to "KLOPT NIET" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

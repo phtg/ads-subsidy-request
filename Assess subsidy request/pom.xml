@@ -13,6 +13,10 @@
         <module>Assess request</module>
         <module>Assess subsidy</module>
         <module>Data</module>
+        <module>Date test</module>
+        <module>Just date test</module>
+        <module>NestedModel</module>
+        <module>ParentModel</module>
         <module>.decisionservice</module>
     </modules>
 

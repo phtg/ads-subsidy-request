@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="NestedModel">
+  <name>nestedModel</name>
+  <uuid>f214ab5b-8d5c-476c-ac5e-9da52c06c649</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e48e198e-7c26-4e2a-a4a1-20f1c59a5305"/>
+  <targetRuleProject href="../../NestedModel#6350e027-1b32-429c-ae6b-068ca9edd3c7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
