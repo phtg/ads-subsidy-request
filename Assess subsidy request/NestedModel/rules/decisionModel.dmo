@@ -58,5 +58,13 @@
         </extensionElements>
         <variable id="node_3_ii" name="Input 3" typeRef="CompositeTest"/>
     </inputData>
+    <inputData id="node_4" name="Input 4">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input 4"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Input 4" typeRef="java.lang.String"/>
+    </inputData>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
